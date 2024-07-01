@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
+.header{
+  background-color: #002244;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.registro-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 23%;
+  height: 48rem;
+  border-radius: 8px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.795);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #002244;
+}
+
+.registro-container form{
+  background-color: white;
+  border-radius:  100px 0px 0px 0px;
+  height: 35rem;
+}
+
+
+h2 {
+  margin-bottom: 30px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+}
+
+
+.registro-container form label{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 70%;
+  margin: 10% auto 0 auto;
+  justify-content: space-between;
+}
+
+.registro-container form label input{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  margin-top: 3%;
+  padding: .2rem;
+  font-size: larger;
+  width: 97%;
+}
+
+.password-input{
+  display: flex;
+  align-items: center;
+}
+
+
+.logo{
+  width: 40%;
+}
+
+.loginButton, .registerButton{
+  padding: .4rem;
+  width: 60%;
+  font-size: larger;
+  background-color: #002244;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.registerButton{
+  margin-top: 5%;
+}
+
+.registerLink, .loginLink{
+  margin-top: 12%;
+}
+
+.registerLink a, .loginLink a{
+  color: #002244;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.map{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.formCordinatesContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formCordinatesContainer form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  background-color: #C0C0C0;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  transition: all .8s;
+}
+
+.formCordinatesContainer .form{
+  height: auto!important;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  background-color: #C0C0C0;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  transition: all .8s;
+}
+
+.formCordinatesContainer .separeted_input_cordinates{
+  width: 80%;
+}
+
+.formCordinatesContainer form label{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.formCordinatesContainer form label input{
+  outline: none;
+  border-radius: 6px;
+  padding: .5rem;
+  border: gray solid;
+}
+
+.headerForm{
+  position: relative;
+  background-color: #002244;
+  color: white;
+  width: 50%;
+  padding: 1.2rem;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerForm .arrowDown{
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+}
+
+.headerForm:hover .arrowDown{
+  animation-name: moveArrow;
+  animation-duration: 2s;
+  animation-fill-mode:forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.leaflet-draw .leaflet-draw-section a[title="Clear all layers"]{
+  display: none;
+}
+
+.trash{
+  position: absolute;
+  right: 10%;
+}
+
+.container-overlay-1{
+  z-index: 2000;
+  width: 20rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 30%;
+}
+
+.container-overlay-1 .ArrowPull{
+  background: rgba(1, 1, 63, 0.726);
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  border-radius: 250px 0 0 250px;
+  cursor: pointer;
+}
+
+.floatDiv-addCordinates{
+  width: 20rem;
+  height: 27rem;  
+  border: none;
+  z-index: 2000;
+  border-radius: 25px;
+  overflow: auto;
+  background: rgba(1, 1, 63, 0.726);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .8rem;
+}
+
+.floatDiv-addCordinates form label{
+  display: flex;
+  flex-direction: column;
+}
+
+.floatDiv-addCordinates form label input {
+  outline: none;
+  padding: .4rem;
+  margin-bottom: 5%;
+  border:none;
+  border-radius: 8px;
+  width: 250px;
+}
+
+select{
+  outline: none;
+  padding: .4rem;
+  cursor: pointer;
+  margin-bottom: 5%;
+  border:none;
+  border-radius: 8px;
+  width: 250px;
+}
+.form-lt-lg .button-save-delet{
+  border-radius: 8px;
+  border: none;
+  padding: .4rem;
+  cursor: pointer;
+}
+
+.form-lt-lg .save{
+  margin-left: 10%;
+}
+
+select option{
+  outline: none;
+  cursor: pointer;  
+}
+
+.form-lt-lg{
+  padding: .2rem;
+  margin-bottom: 5%;
+  width: 95%;
+}
+
+.form-lt-lg h3{
+color: white;
+text-align: center;
+padding-top: 6px;
+}
+
+.addPolygon{
+  z-index: 2000;
+  position: absolute;
+  right: -.3%;
+  bottom: 3.5%;
+  padding: 0.5rem;
+  width: 21%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addPolygon button{
+  background-color: rgba(1, 1, 63, 0.726);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.containerModal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2001;
+}
+
+.Modal-Cordinates, .Modal-Error{
+  z-index: 2001;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(0px)!important;
+}
+
+.modal-content{
+  border-radius: 10px;
+  width: 40%;
+  height: 70%;
+  background-color: #DCDCDC;
+  box-shadow: 0px 0px 177px 29px rgba(0,0,0,0.44);
+}
+
+.Modal-Error-Content{
+  border-radius: 10px;
+  width: 40%;
+  height: 20%;
+  background-color: #DCDCDC;
+  box-shadow: 0px 0px 177px 29px rgba(0,0,0,0.44);
+}
+
+.Modal-Error-Content header{
+  border-radius: 10px 10px 0px 0px;
+  background-color: #002244;
+  padding: 1rem 0rem 0.2rem 1rem;
+}
+
+.Modal-Error-Content header h2{
+  color: #880808;
+  font-size: 2rem;
+}
+
+.Modal-Error-Content section{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 50%;
+  padding: 1rem;
+}
+
+.Modal-Error-Content section button{
+  width: 13%;
+  padding: .4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  right: 5%;
+  bottom: .4%;
+  background-color: #880808;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  border: none;
+}
+
+.headerModal{
+  background-color:#002244;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.headerModal h2{
+  color: white;
+}
+
+.bodyModal{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 87%;
+  padding: 3rem;
+}
+
+.bodyModal form label{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.bodyModal form label input{
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid;
+  border-left: none;
+  outline: none;
+  padding: .4rem;
+  border-radius: 4px;
+}
+
+
+.bodyModal .closeModal{
+  position: absolute;
+  border: none;
+  width: 13%;
+  padding: .6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  bottom: 5%;
+  right: 23%;
+  background-color: #880808;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.bodyModal .addCordinateButton{
+  border: none;
+  width: auto;
+  margin-left: 2%;
+  padding: .6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  background-color: #50C878;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.bodyModal .addCordinateButton:disabled{
+  opacity: .2;
+  cursor: not-allowed;
+}
+
+.bodyModal .saveCordinatesModalButton{
+  position: absolute;
+  border: none;
+  width: 13%;
+  padding: .6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  bottom: 5%;
+  right: 5%;
+  color: white;
+  background-color: #50C878;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.bodyModal .saveCordinatesModalButton:disabled{
+  opacity: .2;
+  cursor: not-allowed;
+}
+
+.go-to{
+  z-index: 2000;
+  position: absolute;
+}
+
+.go-to select{
+  padding: .4rem;
+  font-size: larger;
+}
+
+.exit{
+  position: absolute;
+  z-index: 2006;
+  bottom: 4%;
+  left: 3%;
+}
+
+.exit .exitButton{
+  background-color:#880808;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 1rem;
+  cursor: pointer;
+  width: 8rem;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.city{
+  z-index: 2001;
+  position: absolute;
+  left: 7%;
+  top: 2%;
+  height: 9%;
+}
+
+.city form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.city form input{
+  padding: .4rem;
+  border-radius: 6px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: #C0C0C0 solid;
+  outline: none;
+}
+
+.city form button{
+  width: 60%;
+  padding: .4rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #50C878;
+  color: white;
+  font-weight: bold;
+}
+
+@media only screen and (max-width:1440px){
+  .registro-container{
+    width: 36%;
+  }
+  .registro-container form{
+    height: 43rem;
+  }
+}
+
+@media only screen and (min-width:1920px){
+  .addPolygon{
+    width: 27%;
+  }
+  .Modal-Error-Content{
+    height: 27%;
+  }
+}
+
+@media only screen and (min-width:1000px){
+  .addPolygon{
+    width: 35%;
+  }
+  .Modal-Error-Content{
+    height: 27%;
+  }
+}
+
+@keyframes moveArrow{
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(5px);
+  }
+
+  100%{
+    transform: translateY(-5px);
+  }
+}
